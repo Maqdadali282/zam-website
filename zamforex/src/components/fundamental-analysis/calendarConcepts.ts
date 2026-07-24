@@ -1,0 +1,61 @@
+import type { ConceptEntry } from "@/components/technical-analysis/ConceptAccordion";
+
+const CAL = "var(--gold)";
+
+export const calendarConcepts: ConceptEntry[] = [
+  {
+    id: "actual-vs-forecast",
+    term: "Actual vs. Forecast",
+    def: "The single most important comparison on any economic calendar — what the data actually came in at, versus what economists expected.",
+    accent: CAL,
+    how: "Markets have usually already priced in the forecast before the release, so the reaction is driven almost entirely by the gap between actual and forecast, not the actual number alone.",
+    bullish: "Actual beats forecast on a positive metric (e.g. GDP, NFP) — the currency often reacts immediately and sharply.",
+    bearish: "Actual misses forecast on a positive metric — the currency often reacts immediately in the opposite direction.",
+    mistake: "Reading a 'good' number as automatically bullish without checking what was forecast — a still-strong number that missed forecast can still weaken the currency.",
+    tip: "Always check the forecast before a release — it's the benchmark every reaction gets measured against.",
+  },
+  {
+    id: "previous-data",
+    term: "Previous Data",
+    def: "The prior period's reading for the same metric — often revised slightly by the time the new release comes out.",
+    accent: CAL,
+    how: "Comparing actual to previous shows the trend (accelerating or decelerating), which matters alongside the forecast comparison.",
+    bullish: "A metric improving versus both the previous reading and the forecast is the strongest possible combination for that currency.",
+    bearish: "A metric worsening versus both the previous reading and the forecast is the weakest possible combination for that currency.",
+    mistake: "Overlooking a revision to the previous figure — a big downward revision can offset an otherwise strong new headline number.",
+    tip: "Revisions to previous data are often reported in the same release and can move markets almost as much as the new figure.",
+  },
+  {
+    id: "economic-surprise",
+    term: "Economic Surprise",
+    def: "The gap between actual and forecast — the actual driver of most news-based volatility.",
+    accent: CAL,
+    how: "A large surprise (in either direction) forces traders to quickly reprice their expectations for growth, inflation, or rates — that repricing is what shows up as a sharp price move.",
+    bullish: "A large positive surprise on a currency-supportive metric tends to cause a fast, sharp rally.",
+    bearish: "A large negative surprise on a currency-supportive metric tends to cause a fast, sharp decline.",
+    mistake: "Assuming every release causes a surprise — most prints land close to forecast and cause only minor movement.",
+    tip: "Some calendars publish a 'surprise index' that tracks how consistently a country's data has been beating or missing forecasts recently — a useful trend to watch.",
+  },
+  {
+    id: "news-volatility",
+    term: "News Volatility",
+    def: "The sharp, fast price swings that happen in the minutes around a high-impact release, as the market digests the new information.",
+    accent: CAL,
+    how: "Algorithms parse headline numbers within milliseconds of release, causing an initial spike, followed by a slower human-driven move as the details get read.",
+    bullish: "A clean, one-directional spike on a clear surprise usually means the initial move is the real move.",
+    bearish: "A sharp spike that fully reverses within minutes often signals the initial reaction was an overreaction to the headline alone.",
+    mistake: "Placing tight stop-losses right before a high-impact release — the initial spike can easily trigger a stop before the 'real' move even starts.",
+    tip: "Many traders deliberately avoid opening new positions in the minute directly before a high-impact release, to sidestep the initial spike volatility.",
+  },
+  {
+    id: "high-impact-news",
+    term: "High-Impact News",
+    def: "Releases flagged as most likely to move the market meaningfully — typically rate decisions, NFP, CPI, and GDP.",
+    accent: CAL,
+    how: "Calendars rank events by expected impact (usually Low, Medium, High) based on historical volatility around that release.",
+    bullish: "A high-impact event beating expectations tends to produce a bigger, more sustained move than a low-impact event doing the same.",
+    bearish: "A high-impact event missing expectations tends to produce a bigger, more sustained move than a low-impact event doing the same.",
+    mistake: "Treating every red 'high-impact' flag as guaranteed volatility — an in-line result on a high-impact event can still barely move price.",
+    tip: "Check impact level alongside currency exposure — a high-impact JPY event matters far less to a EUR/USD trader than a high-impact USD or EUR event.",
+  },
+];

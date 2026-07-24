@@ -1,0 +1,98 @@
+import type { ConceptEntry } from "@/components/technical-analysis/ConceptAccordion";
+
+const EMPLOYMENT = "var(--cat-7)";
+const GROWTH = "var(--cat-3)";
+
+export const employmentConcepts: ConceptEntry[] = [
+  {
+    id: "nfp",
+    term: "Non-Farm Payrolls (NFP)",
+    def: "The number of jobs added or lost in the US economy in the past month, excluding farm workers — released the first Friday of most months.",
+    accent: EMPLOYMENT,
+    how: "A strong labor market usually means a healthy, growing economy, which supports both consumer spending and the case for higher interest rates.",
+    bullish: "NFP beats forecasts by a wide margin — USD often spikes within minutes as traders price in a more hawkish Fed.",
+    bearish: "NFP misses forecasts badly — USD often drops as traders price in a more dovish Fed to support a weakening labor market.",
+    mistake: "Trading the headline number alone without checking the unemployment rate and wage growth released in the same report.",
+    tip: "NFP is famous for huge revisions to the prior month's figure — a strong headline paired with a big downward revision can mute the reaction.",
+  },
+  {
+    id: "unemployment-rate",
+    term: "Unemployment Rate",
+    def: "The percentage of the labor force that is jobless and actively looking for work.",
+    accent: EMPLOYMENT,
+    how: "Central banks watch this closely because full employment is typically one half of their official mandate, alongside price stability.",
+    bullish: "The unemployment rate falls unexpectedly — signals a tightening labor market, which can support the currency via rate expectations.",
+    bearish: "The unemployment rate rises unexpectedly — signals labor market weakness, which can pressure the currency via dovish rate expectations.",
+    mistake: "Ignoring the labor force participation rate — unemployment can fall simply because people stop looking for work, not because more jobs exist.",
+    tip: "A rising unemployment rate alongside strong NFP job growth can happen if the labor force itself is growing even faster.",
+  },
+  {
+    id: "wage-growth",
+    term: "Wage Growth",
+    def: "The year-over-year change in average hourly earnings — how fast paychecks are growing.",
+    accent: EMPLOYMENT,
+    how: "Rising wages can feed directly into inflation (workers spend more), so central banks watch wage growth as a leading signal for future price pressure.",
+    bullish: "Wage growth accelerates faster than forecast — raises inflation concerns and can support a hawkish rate outlook.",
+    bearish: "Wage growth slows more than forecast — eases inflation concerns and can support a dovish rate outlook.",
+    mistake: "Treating strong wage growth as purely positive — if it runs too hot, it can actually worry markets by fueling inflation fears.",
+    tip: "Wage growth is often released in the very same NFP report — check it alongside the jobs number, not instead of it.",
+  },
+  {
+    id: "jobless-claims",
+    term: "Jobless Claims",
+    def: "A weekly count of people filing for unemployment benefits for the first time — one of the most frequent, timely labor market signals available.",
+    accent: EMPLOYMENT,
+    how: "Because it's released weekly (not monthly like NFP), jobless claims often give the first real-time hint that the labor market is turning before the bigger reports confirm it.",
+    bullish: "Claims fall to a fresh low — signals a resilient labor market, supportive for the currency.",
+    bearish: "Claims rise for several weeks in a row — an early warning sign of labor market softening, which can pressure the currency.",
+    mistake: "Overreacting to a single week's print — this data is noisy, and one print rarely changes the broader trend.",
+    tip: "Watch the 4-week moving average of claims, not the single weekly print, for a cleaner read on the underlying trend.",
+  },
+];
+
+export const growthConcepts: ConceptEntry[] = [
+  {
+    id: "gdp",
+    term: "GDP — Gross Domestic Product",
+    def: "The total value of everything a country produces in a given period — the broadest possible scorecard of economic output.",
+    accent: GROWTH,
+    how: "Strong GDP signals a healthy, expanding economy, which typically supports both investor confidence and the case for higher rates.",
+    bullish: "GDP growth beats forecasts — signals economic strength, generally supportive for the currency.",
+    bearish: "GDP growth misses forecasts, or contracts — signals economic weakness, generally a drag on the currency.",
+    mistake: "Treating GDP as a fast-moving indicator — it's released quarterly and is often backward-looking by the time it prints.",
+    tip: "Markets react more to GDP forecasts and revisions than the lagging headline number itself.",
+  },
+  {
+    id: "gdp-growth",
+    term: "GDP Growth Rate",
+    def: "How fast GDP is expanding or contracting compared to the prior period, usually expressed as an annualized percentage.",
+    accent: GROWTH,
+    how: "The rate of change matters more than the absolute GDP level — accelerating or decelerating growth shapes rate expectations.",
+    bullish: "Growth accelerates from the prior quarter — can support a more hawkish rate outlook and a stronger currency.",
+    bearish: "Growth decelerates from the prior quarter — can support a more dovish rate outlook and a weaker currency.",
+    mistake: "Comparing growth rates across countries without adjusting for their different 'normal' baseline growth rates.",
+    tip: "A slowdown from a very high growth rate can still be a healthy economy — context and trend matter more than the single number.",
+  },
+  {
+    id: "recession",
+    term: "Recession",
+    def: "A significant, widespread decline in economic activity, commonly (though not officially) defined as two consecutive quarters of negative GDP growth.",
+    accent: GROWTH,
+    how: "Recessions typically trigger central banks to cut rates aggressively to stimulate the economy, which weighs on the currency over time.",
+    bullish: "A recession abroad (not at home) can actually support the home currency as capital seeks the relatively stronger economy.",
+    bearish: "Confirmation of a recession, or growing recession fears, tends to weigh heavily on that country's currency.",
+    mistake: "Waiting for the official two-quarter confirmation before reacting — markets usually price in recession risk well before it's confirmed.",
+    tip: "Recession fears often move currencies faster than an actual confirmed recession — watch leading indicators, not just GDP itself.",
+  },
+  {
+    id: "economic-expansion",
+    term: "Economic Expansion",
+    def: "The growth phase of the business cycle — output, employment, and income are all rising.",
+    accent: GROWTH,
+    how: "During expansion, central banks often shift toward tightening (or away from easing) to keep the growing economy from overheating into high inflation.",
+    bullish: "Confirmation of a strong, sustained expansion tends to support a currency through both growth optimism and hawkish rate expectations.",
+    bearish: "An expansion that's clearly 'late-cycle' and slowing can start to worry markets about the next downturn approaching.",
+    mistake: "Assuming expansion lasts forever — every expansion phase eventually gives way to a peak and slowdown.",
+    tip: "The transition out of expansion (not the expansion itself) is usually where the biggest currency moves happen, as rate expectations flip.",
+  },
+];

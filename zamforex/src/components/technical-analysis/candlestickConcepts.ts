@@ -1,0 +1,98 @@
+import type { ConceptEntry } from "./ConceptAccordion";
+
+const SINGLE = "var(--mint)";
+const MULTI = "var(--cat-2)";
+
+export const singleCandleConcepts: ConceptEntry[] = [
+  {
+    id: "doji",
+    term: "Doji",
+    def: "A candle where the open and close are almost identical, leaving little to no body — pure indecision between buyers and sellers.",
+    accent: SINGLE,
+    how: "Neither side can push price meaningfully away from where it opened, so it closes right back near the open, often with wicks on both ends.",
+    bullish: "A Doji forming after a downtrend, followed by a strong green candle — indecision resolving in favor of buyers.",
+    bearish: "A Doji forming after an uptrend, followed by a strong red candle — indecision resolving in favor of sellers.",
+    mistake: "Trading the Doji itself instead of waiting for the next candle to show which side actually won.",
+    tip: "A Doji at a key support/resistance level or order block carries far more weight than one in the middle of nowhere.",
+  },
+  {
+    id: "hammer",
+    term: "Hammer",
+    def: "A small body near the top of the candle's range with a long lower wick and little to no upper wick — forms after a downtrend.",
+    accent: SINGLE,
+    how: "Sellers push price sharply lower during the candle, but buyers step in hard and drive it back up to close near the open — the long lower wick is that rejection.",
+    bullish: "A hammer prints at the bottom of a downtrend, right at a support zone, followed by a bullish close above its body — a classic reversal signal.",
+    bearish: "Not a bearish pattern — its mirror image (Shooting Star) is the bearish version at the top of a trend.",
+    mistake: "Calling any candle with a small body a hammer — the lower wick must be at least roughly twice the size of the body.",
+    tip: "A hammer means more when it lines up with an existing demand zone or a fib retracement level.",
+  },
+  {
+    id: "shooting-star",
+    term: "Shooting Star",
+    def: "A small body near the bottom of the candle's range with a long upper wick and little to no lower wick — forms after an uptrend.",
+    accent: SINGLE,
+    how: "Buyers push price sharply higher during the candle, but sellers overwhelm them and drive it back down to close near the open — the long upper wick is that rejection.",
+    bullish: "Not a bullish pattern — its mirror image (Hammer) is the bullish version at the bottom of a trend.",
+    bearish: "A shooting star prints at the top of an uptrend, right at a resistance zone, followed by a bearish close below its body — a classic reversal signal.",
+    mistake: "Confusing it with an Inverted Hammer — the shape looks similar, but the context (top of an uptrend vs. bottom of a downtrend) is what tells them apart.",
+    tip: "A long upper wick without a strong bearish follow-through candle is a warning, not yet a confirmed reversal.",
+  },
+  {
+    id: "inverted-hammer",
+    term: "Inverted Hammer",
+    def: "A small body near the bottom of the candle's range with a long upper wick and little to no lower wick — forms after a downtrend.",
+    accent: SINGLE,
+    how: "Buyers make an attempt to push price higher during the candle and get partially rejected, but the fact they showed up at all after a downtrend is the early signal.",
+    bullish: "An inverted hammer at the bottom of a downtrend, followed by a strong bullish confirmation candle — buyers are stepping back in.",
+    bearish: "On its own it isn't bearish, but failing to get bullish follow-through the next candle weakens the signal considerably.",
+    mistake: "Treating it as confirmation on its own — unlike a hammer, it needs a strong bullish candle right after it to actually validate the reversal.",
+    tip: "Shape alone doesn't tell you if it's a Shooting Star or an Inverted Hammer — check whether it follows an uptrend or a downtrend.",
+  },
+];
+
+export const multiCandleConcepts: ConceptEntry[] = [
+  {
+    id: "bullish-engulfing",
+    term: "Bullish Engulfing",
+    def: "A small red candle followed by a larger green candle whose body completely engulfs the prior candle's body.",
+    accent: MULTI,
+    how: "Sellers control the first candle, but buyers overwhelm them so completely on the second that price closes above the first candle's open — a decisive shift in control.",
+    bullish: "A bullish engulfing candle forming right at a demand zone or a prior swing low, followed by continued upside.",
+    bearish: "If the very next candle after a bullish engulfing pattern closes back below its low, the reversal signal has failed.",
+    mistake: "Only checking the candle colors and ignoring whether the second body actually engulfs the first one's full body.",
+    tip: "The larger the second candle relative to the first, the stronger the shift in momentum it usually represents.",
+  },
+  {
+    id: "bearish-engulfing",
+    term: "Bearish Engulfing",
+    def: "A small green candle followed by a larger red candle whose body completely engulfs the prior candle's body.",
+    accent: MULTI,
+    how: "Buyers control the first candle, but sellers overwhelm them so completely on the second that price closes below the first candle's open — a decisive shift in control.",
+    bullish: "If the very next candle after a bearish engulfing pattern closes back above its high, the reversal signal has failed.",
+    bearish: "A bearish engulfing candle forming right at a supply zone or a prior swing high, followed by continued downside.",
+    mistake: "Trading every two-candle engulfing pattern the same way regardless of where it forms on the chart — location matters as much as shape.",
+    tip: "Engulfing patterns that also close through a nearby support/resistance level or order block carry extra weight.",
+  },
+  {
+    id: "morning-star",
+    term: "Morning Star",
+    def: "A three-candle bullish reversal: a large red candle, a small-bodied candle that gaps or drifts lower, then a large green candle closing well into the first candle's body.",
+    accent: MULTI,
+    how: "The first candle shows sellers in control, the middle candle shows the selling pressure stalling out, and the third candle shows buyers decisively taking back control.",
+    bullish: "A morning star forming at the bottom of a downtrend, at a support zone, with the third candle closing above the midpoint of the first — high-probability reversal setup.",
+    bearish: "Its mirror image, the Evening Star, is the bearish three-candle reversal that forms at the top of an uptrend.",
+    mistake: "Calling a pattern a morning star without the middle candle actually showing a genuine pause — three random candles aren't enough.",
+    tip: "The deeper the third candle closes into the first candle's body, the stronger the reversal signal is considered.",
+  },
+  {
+    id: "evening-star",
+    term: "Evening Star",
+    def: "A three-candle bearish reversal: a large green candle, a small-bodied candle that gaps or drifts higher, then a large red candle closing well into the first candle's body.",
+    accent: MULTI,
+    how: "The first candle shows buyers in control, the middle candle shows the buying pressure stalling out, and the third candle shows sellers decisively taking back control.",
+    bullish: "Its mirror image, the Morning Star, is the bullish three-candle reversal that forms at the bottom of a downtrend.",
+    bearish: "An evening star forming at the top of an uptrend, at a resistance zone, with the third candle closing below the midpoint of the first — high-probability reversal setup.",
+    mistake: "Reacting to just the first two candles — the pattern isn't complete until the third candle actually confirms it.",
+    tip: "Like the morning star, this pattern means more at a level you already had marked than in the middle of an unremarkable range.",
+  },
+];

@@ -1,0 +1,98 @@
+import type { ConceptEntry } from "@/components/technical-analysis/ConceptAccordion";
+
+const RATE = "var(--mint)";
+const INFLATION = "var(--cat-2)";
+
+export const rateConcepts: ConceptEntry[] = [
+  {
+    id: "rate-decisions",
+    term: "Interest Rate Decisions",
+    def: "The scheduled announcement of a central bank's benchmark rate — held, hiked, or cut.",
+    accent: RATE,
+    how: "This single number sets the baseline cost of borrowing (and the baseline return on saving) for an entire economy, which ripples into every other asset price, including the currency.",
+    bullish: "A rate hike, especially a bigger one than forecast, tends to attract yield-seeking capital and strengthen the currency.",
+    bearish: "A rate cut, especially a bigger one than forecast, tends to push capital elsewhere and weaken the currency.",
+    mistake: "Reacting to the headline number alone without checking whether it matched, beat, or missed the forecast.",
+    tip: "The market reaction is driven by the surprise relative to expectations, not the raw direction of the decision.",
+  },
+  {
+    id: "rate-hikes",
+    term: "Rate Hikes",
+    def: "An increase in the central bank's benchmark interest rate, making that currency's deposits and bonds pay more.",
+    accent: RATE,
+    how: "Hikes are typically used to slow an overheating economy and bring down inflation by making borrowing more expensive.",
+    bullish: "A series of consecutive hikes tends to build sustained currency strength as the yield advantage compounds.",
+    bearish: "A hike paired with dovish forward guidance ('this may be the last one') can actually weaken the currency despite the hike itself.",
+    mistake: "Buying a currency purely because a hike happened, without checking what the bank signaled about the next meeting.",
+    tip: "The size of the hike matters less than whether it was bigger or smaller than what the market had priced in.",
+  },
+  {
+    id: "rate-cuts",
+    term: "Rate Cuts",
+    def: "A decrease in the central bank's benchmark interest rate, making that currency's deposits and bonds pay less.",
+    accent: RATE,
+    how: "Cuts are typically used to stimulate a slowing economy by making borrowing cheaper for businesses and consumers.",
+    bullish: "A cut paired with hawkish forward guidance ('this may be the only one for a while') can actually support the currency despite the cut itself.",
+    bearish: "A series of consecutive cuts tends to build sustained currency weakness as the yield disadvantage compounds.",
+    mistake: "Assuming every rate cut is currency-negative — a widely expected 'insurance cut' often barely moves price at all.",
+    tip: "Compare the cut to what was priced in for the next several meetings, not just the one decision in front of you.",
+  },
+  {
+    id: "rate-differentials",
+    term: "Interest Rate Differentials",
+    def: "The gap between the interest rates of two countries whose currencies make up a forex pair.",
+    accent: RATE,
+    how: "Capital tends to flow toward whichever currency pays the higher rate, all else being equal — the wider the gap, the stronger that pull.",
+    bullish: "A widening rate differential in a currency's favor (its rates rising faster than the other side) tends to support that currency.",
+    bearish: "A narrowing rate differential against a currency (its rates falling relative to the other side) tends to weigh on that currency.",
+    mistake: "Looking at one country's rate in isolation instead of comparing it to the counter-currency's rate.",
+    tip: "This is why EUR/USD can fall even on a 'good' US rate decision — what matters is the US rate relative to the Eurozone rate.",
+  },
+  {
+    id: "rate-expectations",
+    term: "Rate Expectations",
+    def: "What the market has already priced in about future rate decisions, based on futures markets, surveys, and central bank guidance.",
+    accent: RATE,
+    how: "Forex prices move on changes to these expectations well before the actual decision — by the time the meeting happens, much of the move may already be priced in.",
+    bullish: "Expectations shift toward more/faster hikes than previously priced — the currency often strengthens immediately, before any meeting happens.",
+    bearish: "Expectations shift toward more/faster cuts than previously priced — the currency often weakens immediately, before any meeting happens.",
+    mistake: "Trading the actual decision without knowing what was already expected — an 'as expected' result usually causes only a small reaction.",
+    tip: "Rate expectations are the bridge between economic data and currency price — this is the number that actually moves, not the rate itself.",
+  },
+];
+
+export const inflationConcepts: ConceptEntry[] = [
+  {
+    id: "cpi",
+    term: "CPI — Consumer Price Index",
+    def: "The most-watched inflation gauge — measures the average change in prices consumers pay for a fixed basket of goods and services.",
+    accent: INFLATION,
+    how: "Released monthly, CPI is the primary data central banks reference when deciding whether inflation is under control or needs a policy response.",
+    bullish: "CPI comes in hotter than forecast — traders price in more/faster hikes, and the currency often strengthens.",
+    bearish: "CPI comes in cooler than forecast — traders price in more/faster cuts, and the currency often weakens.",
+    mistake: "Reacting to the headline year-over-year number alone without checking the month-over-month trend or the core figure.",
+    tip: "The reaction is almost always about the surprise versus forecast, not whether inflation is simply 'high' or 'low' in absolute terms.",
+  },
+  {
+    id: "core-cpi",
+    term: "Core CPI",
+    def: "CPI with volatile food and energy prices stripped out — considered a cleaner read on the underlying inflation trend.",
+    accent: INFLATION,
+    how: "Food and energy prices swing for reasons unrelated to monetary policy (weather, supply shocks), so central banks weight core inflation more heavily when setting rates.",
+    bullish: "Core CPI staying stubbornly high, even as headline CPI cools, can keep a central bank hawkish and support the currency.",
+    bearish: "Core CPI falling faster than expected removes pressure on the central bank to keep hiking, which can weigh on the currency.",
+    mistake: "Ignoring core CPI and reacting only to the headline figure, especially during periods of volatile energy prices.",
+    tip: "When headline and core CPI disagree, core is generally the better guide to what the central bank will actually do next.",
+  },
+  {
+    id: "ppi",
+    term: "PPI — Producer Price Index",
+    def: "Measures the average change in prices producers receive for their goods — effectively inflation one step earlier in the supply chain.",
+    accent: INFLATION,
+    how: "Because producer costs often get passed on to consumers, PPI is sometimes treated as a leading indicator that hints at where CPI is headed next.",
+    bullish: "A hotter-than-expected PPI print, released a day or two before CPI, can pre-position traders for a hot CPI number too.",
+    bearish: "A cooler-than-expected PPI print can pre-position traders for a soft CPI number, easing pressure on the central bank.",
+    mistake: "Treating PPI as equally market-moving as CPI — it typically causes a smaller reaction since CPI is the number central banks emphasize most.",
+    tip: "Use PPI as an early hint, not a guarantee — the relationship between PPI and the following CPI print is a lean, not a lock.",
+  },
+];

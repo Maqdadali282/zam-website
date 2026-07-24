@@ -1,0 +1,98 @@
+import type { ConceptEntry } from "@/components/technical-analysis/ConceptAccordion";
+
+const SIZING = "var(--red)";
+const CONTROL = "var(--gold)";
+
+export const sizingConcepts: ConceptEntry[] = [
+  {
+    id: "risk-per-trade",
+    term: "Risk Per Trade",
+    def: "The maximum amount — usually a fixed percentage of your account — you're willing to lose if a single trade hits its stop loss.",
+    accent: SIZING,
+    how: "Deciding this before you look at any specific trade keeps every position sized consistently, so no single loss can meaningfully damage the account.",
+    bullish: "A trader risking a fixed 1% per trade can lose 10 trades in a row and still have roughly 90% of their account left to work with.",
+    bearish: "A trader risking 10% per trade only needs 2-3 consecutive losses to be down nearly a third of their account.",
+    mistake: "Sizing trades based on how confident you feel about them, rather than a fixed rule applied to every trade equally.",
+    tip: "Most professional risk frameworks land somewhere between 0.5% and 2% per trade — the exact number matters less than applying it consistently.",
+  },
+  {
+    id: "position-sizing",
+    term: "Position Sizing",
+    def: "Turning your risk-per-trade percentage into an actual number of lots or units to trade, based on your stop-loss distance.",
+    accent: SIZING,
+    how: "The same account risking the same 1% will need a much smaller position for a 100-pip stop than for a 20-pip stop — position sizing is what keeps the dollar risk constant either way.",
+    bullish: "A wider stop loss on a slower-moving pair gets a smaller position size, keeping the risk in dollars identical to a tighter stop on a faster pair.",
+    bearish: "Trading the same lot size regardless of stop distance means a wide-stop trade risks far more than a tight-stop trade, even though the plan didn't intend that.",
+    mistake: "Picking a lot size out of habit (e.g. 'I always trade 0.10 lots') instead of calculating it from the actual stop distance each time.",
+    tip: "This is exactly the calculation the Position Size and Lot Size calculators on this site are built for — the formula matters, but you don't have to do the arithmetic by hand.",
+  },
+  {
+    id: "stop-loss",
+    term: "Stop Loss",
+    def: "A predefined price where a losing trade closes automatically, capping the loss at a known amount.",
+    accent: SIZING,
+    how: "Placed at a level where your trade idea is proven wrong (not just an arbitrary distance), it turns an unlimited downside into a fixed, already-accepted number.",
+    bullish: "A stop placed just beyond a structural level (like a recent swing low) only triggers if the actual trade idea has failed.",
+    bearish: "A stop placed at a round, arbitrary distance with no structural reason often gets clipped by normal market noise before the idea has even failed.",
+    mistake: "Widening or removing a stop loss after the trade is already open and moving against you — this is loss aversion, not strategy.",
+    tip: "Decide your stop loss location before you enter, not while the trade is already losing — the version of you with no open position thinks more clearly.",
+  },
+  {
+    id: "take-profit",
+    term: "Take Profit",
+    def: "A predefined price where a winning trade closes automatically, locking in the gain instead of leaving it to chance.",
+    accent: SIZING,
+    how: "Set at a realistic target based on market structure, it removes the temptation to keep moving the goalposts once a trade is already in profit.",
+    bullish: "A take profit set at a level with real resistance behind it captures a realistic move without depending on price breaking through overhead supply.",
+    bearish: "An overly ambitious take profit set well beyond any real resistance often means giving back a solid gain waiting for a target the market never reaches.",
+    mistake: "Removing the take profit mid-trade out of greed, hoping for more, after the original target already justified the trade.",
+    tip: "Your take profit and stop loss decide your risk:reward ratio together — set both before entering, not one after the other.",
+  },
+];
+
+export const controlConcepts: ConceptEntry[] = [
+  {
+    id: "risk-reward-ratio",
+    term: "Risk-to-Reward Ratio",
+    def: "How much you stand to gain compared to how much you're risking on the same trade, expressed as a ratio like 1:2.",
+    accent: CONTROL,
+    how: "Comparing the distance to your stop loss against the distance to your take profit tells you whether a setup is worth taking even before you consider your win rate.",
+    bullish: "A strategy with a 1:2 average risk:reward only needs to win more than roughly a third of its trades to be profitable over time.",
+    bearish: "A strategy risking more than it targets (worse than 1:1) needs a very high win rate just to break even, which is hard to sustain.",
+    mistake: "Judging a strategy by win rate alone — a 70%-win strategy that risks 3x its average win can still lose money overall.",
+    tip: "The Risk Reward Calculator on this site turns your entry, stop, and target into this ratio instantly — use it before every trade, not after.",
+  },
+  {
+    id: "drawdown",
+    term: "Drawdown",
+    def: "The decline from an account's peak balance to a subsequent low point, usually expressed as a percentage.",
+    accent: CONTROL,
+    how: "Every strategy has losing streaks — drawdown measures how deep those streaks get, which matters as much as the strategy's average return.",
+    bullish: "A strategy with a maximum historical drawdown of 10% is generally easier to stick with through a losing streak than one that swings 40%.",
+    bearish: "A strategy that looks profitable on paper but carries a 50%+ drawdown is extremely difficult to actually trade through emotionally, even if the long-run numbers work out.",
+    mistake: "Increasing risk per trade to 'recover faster' during a drawdown — this is exactly how a recoverable drawdown turns into an account-ending one.",
+    tip: "The math to recover from drawdown is asymmetric — a 50% loss needs a 100% gain just to get back to even, which is why limiting the size of a drawdown matters so much.",
+  },
+  {
+    id: "leverage-risk",
+    term: "Leverage Risk",
+    def: "The way borrowed buying power (leverage) magnifies both potential gains and potential losses on the same position.",
+    accent: CONTROL,
+    how: "Leverage doesn't change the risk you've already decided on via your stop loss and position size — but using high leverage without proper sizing tempts traders into oversized positions relative to their account.",
+    bullish: "A trader who calculates position size from risk percentage first tends to use only a small fraction of the leverage actually available to them.",
+    bearish: "A trader who thinks 'I have 1:500 leverage, so I should use it' often ends up risking a dangerous percentage of their account on a single trade.",
+    mistake: "Confusing available leverage with recommended position size — the two are related, but leverage is a limit, not a target.",
+    tip: "The Margin Calculator on this site shows exactly how much of your capital gets tied up at a given leverage — check it before assuming higher leverage is automatically better.",
+  },
+  {
+    id: "overtrading",
+    term: "Overtrading",
+    def: "Taking far more trades — or far larger positions — than your strategy or plan actually calls for.",
+    accent: CONTROL,
+    how: "It usually comes from boredom, the urge to 'make something happen,' or trying to recover a loss quickly, rather than from genuine, plan-matching setups appearing.",
+    bullish: "A trader who only takes trades matching a written checklist naturally avoids overtrading, since low-quality days simply produce no valid setups.",
+    bearish: "A trader without a clear checklist can convince themselves almost any chart is a valid setup on a slow day, leading to far more trades than the strategy was actually designed for.",
+    mistake: "Treating 'not trading today' as a failure — some of the best trading days are the ones with zero valid setups and zero trades taken.",
+    tip: "Track your trade count against your plan's expected frequency in a trading journal — a sudden spike is an early warning sign worth investigating.",
+  },
+];
