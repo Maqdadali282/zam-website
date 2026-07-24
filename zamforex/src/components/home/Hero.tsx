@@ -40,15 +40,15 @@ export default function Hero() {
         </div>
         <div className="hero-stats">
           <div className="stat">
-            <StatCounter value="500+" className="num" />
+            <StatCounter value="1000+" className="num" />
             <span className="lbl">Traders Guided</span>
           </div>
           <div className="stat">
-            <StatCounter value="30+" className="num" />
+            <StatCounter value="150+" className="num" />
             <span className="lbl">Currency Pairs</span>
           </div>
           <div className="stat">
-            <StatCounter value="24/5" className="num" />
+            <StatCounter value="24/7" className="num" />
             <span className="lbl">Market Access</span>
           </div>
         </div>
