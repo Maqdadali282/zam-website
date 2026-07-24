@@ -36,25 +36,27 @@ export default function DisclaimerPage() {
 
       <section className="cat-section" style={{ maxWidth: "820px", margin: "0 auto", padding: "0 5% 60px" }}>
         <p style={proseP}>
-          Everything published on ZamForex — lessons, charts, worked
-          examples, and calculators — is provided strictly for educational
-          purposes. None of it is a trade recommendation, and none of it
-          should be treated as personalized financial advice. ZamForex is
-          not a licensed financial advisor, broker-dealer, or investment
-          manager.
+          ZamForex is an educational platform, built to help traders at every
+          level understand how the Forex market actually works. Everything we
+          publish — lessons, charts, worked examples, and calculators — is
+          provided strictly for educational purposes. None of it is a trade
+          recommendation, and none of it should be treated as personalized
+          financial advice. ZamForex is not a licensed financial advisor,
+          broker-dealer, or investment manager, and we&apos;re upfront about
+          that so you always know exactly what you&apos;re getting from us.
         </p>
 
         <h3 style={h3Style}>Accuracy &amp; trading risk</h3>
         <p style={proseP}>
-          We make a genuine effort to keep our lessons and live market data
-          accurate, but we can&apos;t guarantee every figure or data point is
-          free of error or delay at every moment — always verify critical
-          information with your broker before acting on it. Trading Forex
-          and CFDs carries a real risk of loss; see our full{" "}
+          We put real care into keeping our lessons and live market data
+          accurate and up to date. As with any live data feed, always
+          cross-check critical figures with your broker before acting on
+          them. Trading Forex and CFDs involves risk, and understanding that
+          risk is part of trading responsibly — see our full{" "}
           <Link href="/risk-disclosure" style={{ color: "var(--mint)" }}>
             Risk Disclosure
-          </Link>
-          .
+          </Link>{" "}
+          for the details.
         </p>
 
         <h3 style={h3Style}>Third-party links &amp; affiliate disclosure</h3>
@@ -70,11 +72,12 @@ export default function DisclaimerPage() {
 
         <h3 style={h3Style}>No guarantees &amp; limitation of liability</h3>
         <p style={proseP}>
-          We do not guarantee any specific trading outcome or profit from
-          using our content or tools. To the fullest extent permitted by
-          law, ZamForex is not liable for any loss arising from your use of,
-          or reliance on, this Site. The Site is provided &quot;as
-          is&quot;, without warranties of any kind.
+          Because trading outcomes depend on the market and on your own
+          decisions, we can&apos;t guarantee any specific result or profit
+          from using our content or tools — no honest educator can. To the
+          fullest extent permitted by law, ZamForex is not liable for any
+          loss arising from your use of, or reliance on, this Site. The Site
+          is provided &quot;as is&quot;, without warranties of any kind.
         </p>
 
         <h3 style={h3Style}>Errors, copyright &amp; contact</h3>

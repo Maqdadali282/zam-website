@@ -36,10 +36,12 @@ export default function TermsConditionsPage() {
 
       <section className="cat-section" style={{ maxWidth: "820px", margin: "0 auto", padding: "0 5% 60px" }}>
         <p style={proseP}>
-          By using the Zam Forex website (&quot;the Site&quot;), you agree to
-          these Terms. If you don&apos;t agree, please don&apos;t use the
-          Site. It&apos;s your responsibility to confirm that accessing this
-          content and opening a broker account is lawful where you live.
+          Zam Forex is an educational platform, not a brokerage, and these
+          Terms are written in plain language so you always know exactly
+          where you stand. By using the Zam Forex website (&quot;the
+          Site&quot;), you agree to these Terms. It&apos;s your
+          responsibility to confirm that accessing this content and opening
+          a broker account is lawful where you live.
         </p>
 
         <h3 style={h3Style}>Accounts &amp; user responsibilities</h3>

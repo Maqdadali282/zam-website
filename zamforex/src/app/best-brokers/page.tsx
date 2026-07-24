@@ -56,22 +56,21 @@ export default function BestBrokersPage() {
       <section id="best-brokers-content">
         <Reveal className="broker-intro">
           <p>
-            Finding the <strong>best Forex broker</strong> is the first and
-            most important step toward success in online trading.
-            Unfortunately, today many unregulated brokers and scammers make
-            it difficult for traders to trust the market. That&apos;s why we
-            connect you only with{" "}
+            Finding the <strong>best Forex broker</strong> is one of the most
+            important steps toward a confident start in online trading.
+            That&apos;s why ZamForex, as an educational platform, connects
+            you only with{" "}
             <strong>
               top, regulated, and globally trusted Forex brokers
             </strong>{" "}
-            – ensuring your money and trading journey remain 100% safe.
+            – so you can focus on learning and trading with peace of mind.
           </p>
         </Reveal>
 
         <Reveal className="section-head">
           <div className="eyebrow">Why It Matters</div>
-          <h2>What separates a great broker from a risky one</h2>
-          <p>The details most traders overlook until it&apos;s too late.</p>
+          <h2>What separates a great broker from the rest</h2>
+          <p>The details worth checking before you open an account.</p>
         </Reveal>
 
         <div className="term-grid">

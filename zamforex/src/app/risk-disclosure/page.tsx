@@ -36,16 +36,23 @@ export default function RiskDisclosurePage() {
       </div>
 
       <div className="ta-page-head" style={{ maxWidth: "820px" }}>
-        <div className="eyebrow" style={{ color: "var(--red)", "--eyebrow-accent": "var(--red)" } as CSSProperties}>
-          Read Before You Trade
+        <div className="eyebrow" style={{ color: "var(--mint)", "--eyebrow-accent": "var(--mint)" } as CSSProperties}>
+          Know Before You Trade
         </div>
         <h1>Risk Disclosure</h1>
       </div>
 
       <section className="cat-section" style={{ maxWidth: "820px", margin: "0 auto", padding: "0 5% 60px" }}>
+        <p style={proseP}>
+          Being upfront about risk is part of educating traders responsibly —
+          not a scare tactic. The clearer you are on what&apos;s at stake
+          before you trade, the better decisions you&apos;ll make once real
+          money is involved. Here&apos;s what you need to know.
+        </p>
+
         <div
           style={{
-            border: "1px solid var(--red)",
+            border: "1px solid var(--mint)",
             borderRadius: "10px",
             background: "var(--chip)",
             padding: "16px 18px",
@@ -53,9 +60,10 @@ export default function RiskDisclosurePage() {
           }}
         >
           <p style={{ ...proseP, marginBottom: 0, color: "var(--text)" }}>
-            <b style={{ color: "var(--red)" }}>Trading Forex, CFDs, commodities, and cryptocurrencies carries a high level of risk</b> and
-            may result in losses that exceed your deposit. Only trade with money you can
-            afford to lose in full.
+            <b style={{ color: "var(--mint)" }}>Trading Forex, CFDs, commodities, and cryptocurrencies carries a meaningful level of risk</b>{" "}
+            and can result in losses, including losses that exceed your
+            deposit. A core principle of responsible trading is to only ever
+            use money you can afford to lose in full.
           </p>
         </div>
 
@@ -72,11 +80,12 @@ export default function RiskDisclosurePage() {
 
         <h3 style={h3Style}>Emotional trading &amp; capital risk</h3>
         <p style={proseP}>
-          Fear and greed cause much of the damage in a beginner&apos;s
-          account — abandoning a stop loss, oversizing after a loss, or
-          exiting winners too early. Never trade with funds needed for
-          essential expenses; it is entirely possible to lose your entire
-          deposited capital.
+          Managing emotion is as much a part of trading as reading a chart —
+          fear and greed are what usually push a beginner to abandon a stop
+          loss, oversize after a loss, or exit winners too early. This is
+          exactly why we teach discipline and risk management alongside
+          strategy. Trade only with capital you don&apos;t need for essential
+          expenses, since it is possible to lose everything you deposit.
         </p>
 
         <h3 style={h3Style}>Past performance</h3>
